@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="@script/script.js"></script>
+    <link rel="stylesheet" href="@css/style.css">
+    <title>Document</title>
+</head>
+<body onload="SetHeaderAndFooter()">
+    <div class="app">
+        <header></header>
+        <article>
+            <div class="column-article">
+                <div class="title">
+                    <a href="#">Fale conosco > Contato</a>
+                    <h2>Formulário</h2>
+                    <i>por Gustavo Guanabara</i>
+                    <span>Atualizado em 23/abril/2013</span>
+                </div>
+                <form action="">
+                    <fieldset class="fieldset-identificacao">
+                        <legend>Identificação do Usuário</legend> 
+                        <label for="nome">Nome:
+                            <input type="text"name="nome" id="nome" placeholder="Nome Completo" maxlength="32" >
+                        </label>
+                        <label for="senha">Senha:
+                            <input type="password" name="senha" id="senha" placeholder="8 dígitos" maxlength="8" >
+                        </label>
+                        <hr>
+                        <label for="email">E-mail:
+                            <input type="email" name="email" id="email" placeholder="Separe por Vírgula">
+                        </label>
+                        <fieldset class="fieldset-sexo">
+                            <legend>Sexo</legend>
+                            <label for="">
+                                <input type="radio" name="sexo">
+                                Masculino
+                            </label>
+                            <label for="sexo">
+                                <input type="radio" name="sexo">
+                                Feminino
+                            </label>
+                        </fieldset>
+                        <label for="data-nascimento">Data de Nascimento
+                            <input type="date" >
+                        </label>
+                    </fieldset>
+                    <fieldset class="fieldset-endereco">
+                        <legend>Endereço</legend>
+                        <label for="logradouro">Logradouro:
+                            <input type="text" placeholder="Rua, Av., Trav">
+                        </label>
+                        <label for="number">número
+                            <input type="number" id="number">
+                        </label>
+                        <label for="estado">Estado:
+                            <!-- <input list="estado" placeholder="Estados"> -->
+                            <select id="cidades" name="cidades">
+                                <option value="MA">Maranhão</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="CR">Ceara</option>
+                            </select>
+                        </label>
+                        <label for="cidades">Cidades:
+                            <!-- <input list="cidades" placeholder="Cidades"> -->
+                            <select id="cidades" name="cidades">
+                                <option value="SL">São luis</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="BH">Belo Horizonte</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="FA">Fortaleza</option>
+                            </select>
+                        </label>
+                    </fieldset>
+                    
+                    <fieldset class="fieldset-mensagem">
+                        <legend>Mensagem do Usuário</legend>
+                        <label for="urgencia">Grau de Urgência:
+                            min:<input class="range" type="range" min="1" max="5" value="3" id="urgencia"/>:max
+                        </label>
+                        <label>Mensagem:</label>
+                        <textarea name="urg-mensagem" id="ur-mensagem" cols="30" rows="10" placeholder="Sua mensagem" maxlength="600"></textarea>
+                    </fieldset>
+                        
+                    <fieldset class="fieldset-quero">
+                        <legend>Quero um Google Glass</legend>
+                        <label for="quero">
+                            <input type="checkbox" name="quero" id="quero">
+                            Gostaria de adquirir um Google Glass quando disponível
+                        </label>
+                        <label for="cor">Cor:
+                            <input type="color" id="cor" name="cor">
+                        </label>
+                        <label for="quantidade">Quantidade:
+                            <input type="number" value="0">
+                        </label>
+                        <label for="p-total">Preço Total: R$
+                            <input type="number" name="p-total" id="p-total" value="0.0"placeholder="Total a Pagar">
+                        </label>
+                    </fieldset>
+                    <button class="btn-enviar">Enviar</button>
+                </form>
+            </div>
+        </article>
+        <footer></footer>
+    </div>
+        <style>
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+            fieldset{
+                border: gray 1px solid;
+            }
+            
+            .fieldset-identificacao{
+                background: url(@imagens/icone-contato.png) no-repeat;
+                background-position: right;
+            }
+
+            .fieldset-endereco{
+                background: url(@imagens/icone-endereco.png) no-repeat;
+                background-position: right;
+            }
+            .fieldset-mensagem{
+                background: url(@imagens/icone-mensagem.png) no-repeat;
+                background-position: right;
+                /* opacity: .; */
+            }
+            label{
+                padding: 5px;
+            }
+            .range{
+                padding: 0px;
+            }
+            input, select{
+                padding: 5px;
+                margin: 5px;
+            }
+            .fieldset-quero{
+                background: url("@imagens/icone-pagamento.png") no-repeat;
+                background-position: right;
+            }
+            .fieldset-quero legend{
+                color: gray;
+                padding: 5px;
+                font-weight: 600;
+            }
+
+            .fieldset-quero{} 
+            fieldset{
+                width: 40%;
+                display: flex;
+                justify-content: left;
+                flex-flow: column;
+                padding: 10px;
+            }
+
+            .text{
+                width: 200px;
+            }
+
+            .textbox{
+                height: 100px;
+                
+            }
+
+            .oculos-desloca{
+                content: url('@imagens/contato.png');
+            }
+
+            article{
+                display: block;
+            }
+            .btn-enviar{
+                background: linear-gradient(rgb(255, 255, 255), rgb(54, 54, 54), rgb(87, 87, 87));
+                color: white;
+                font-size: 16px;
+                padding: 5px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 5px;
+                /* position: relative; */
+                justify-self: flex-start;
+            }
+
+            textarea{
+                padding: 10px;
+                resize: none;
+                
+            }
+        </style>
+</body>
+</html>

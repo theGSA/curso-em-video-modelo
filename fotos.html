@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="@script/script.js"></script>
+    <link rel="stylesheet" href="@css/style.css">
+    <title>Document</title>
+    
+</head>
+<body onload="Init()">
+    <div class="app">
+        <header>
+            <nav>
+                <ul><a href="index.html">HOME</a></ul>
+                <ul><a href="specs.html">ESPECIFICAÇOES</a></ul>
+                <ul><a href="fotos.html">FOTOS</a></ul>
+                <ul><a href="multimidia.html">MULTIMÍDIA</a></ul>
+                <ul><a href="fale_conosco.html">FALE CONOSCO</a></ul>
+            </nav>
+            <div class="container-glass">
+                <div>
+                    <h1>Google Glass</h1>
+                    <p>A revolução do Google está chegando</p>
+                    <img src="@imagens/glass-logo-peq.jpg" alt="">
+                </div>
+                <img class="oculos-desloca" src="@imagens/fotos.png" alt="imagen oculos preto">
+            </div>
+        </header>
+        <div class="container-info">
+            <div class="title">
+                <a href="#">Glass > Fotos</a>
+                <h2>Galeria de Imagens do Google Glass</h2>
+                <i>por Gustavo Guanabara</i>
+                <span>Atualizado em 23/abril/2013</span>
+            </div>
+            <p>Veja na nossa galeria de fotos várias belas imagens que mostram algumas das principais características do Google Glass, como recursos e propriedades que estão impressionando o mundo inteiro. Basta passar o mouse sobre uma das fotos para ver uma versão ampliada e com uma breve descrição.
+            </p>
+            <div id="galeria-fotos" class="container-galeria-fotos">
+                <img src="@imagens/galeria-01.jpg" alt="">
+                <img src="@imagens/galeria-02.jpg" alt="">
+                <img src="@imagens/galeria-03.jpg" alt="">
+                <img src="@imagens/galeria-04.jpg" alt="">
+                <img src="@imagens/galeria-05.jpg" alt="">
+                <img src="@imagens/galeria-06.jpg" alt="">
+            </div>
+        </div>
+        <footer>
+            <i>Copyright 2013 - by Gustavo Guanabara</i>
+            <i>Facebook | Twitter</i>
+        </footer>
+    </div>
+    <style>
+      
+       .column-article{
+            position: relative;
+            width: 100%;
+            height: 500px;
+            margin: 0 auto;
+       }
+
+       .container-info{
+           padding: 20px;
+           border-bottom: 1px solid gray;
+       }
+       .container-fotos{
+            position: relative;
+            width: 80%;
+            height: 100%;
+            background-color: green;
+            margin: 50px;
+        }
+        .container-galeria-fotos{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 50px;
+        }
+
+        .container-foto{
+            width: 250px;
+            padding: 5px;
+            overflow: none;
+            overflow: hidden;
+            object-fit: none;
+            background-color: white;
+            border: 1px rgb(190, 190, 190) solid;
+        }
+        .container-foto-effect
+        {
+            transition: all 0.3s ease-in-out;
+            z-index: 999;
+            width: 350px;
+            padding: 5px;
+            margin: -50px;
+            background-color: white;
+            border: 1px gray solid;
+        }
+        .oculos-desloca{
+            content: url("@imagens/fotos.png");
+        }
+    </style>
+
+    <script>
+        function Init()
+        {
+            SetEffectGalery();
+            SetHeaderAndFooter();
+        }
+
+       
+
+        function SetEffectGalery(){
+            var galeria = document.querySelector("#galeria-fotos").getElementsByTagName('img');
+            if(galeria){
+                for (var a of galeria){
+                    a.addEventListener('mouseover', function(){
+                        this.classList.replace('container-foto','container-foto-effect'); 
+                    }, false);
+                    a.addEventListener('mouseout', function(){
+                        this.classList.replace('container-foto-effect', 'container-foto'); 
+                    }, false);
+                    a.classList.add('container-foto');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

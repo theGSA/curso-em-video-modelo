@@ -2,13 +2,13 @@
 
 @font-face {
     font-family: Computer;
-    src: url(@fonts/computer-font.ttf);
+    src: url("../fonts/computer-font.ttf");
 }
 
 
 @font-face {
     font-family: Bublegum;
-    src: url(@fonts/bubblegum-sans-regular.otf);
+    src: url("../fonts/bubblegum-sans-regular.otf");
 }
 
 *{

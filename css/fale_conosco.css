@@ -1,0 +1,86 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+fieldset{
+    border: gray 1px solid;
+}
+
+.fieldset-identificacao{
+    background: url(../imagens/icone-contato.png) no-repeat;
+    background-position: right;
+}
+
+.fieldset-endereco{
+    background: url("../imagens/icone-endereco.png") no-repeat;
+    background-position: right;
+}
+.fieldset-mensagem{
+    background: url(../imagens/icone-mensagem.png) no-repeat;
+    background-position: right;
+    /* opacity: .; */
+}
+label{
+    padding: 5px;
+}
+.range{
+    padding: 0px;
+}
+input, select{
+    padding: 5px;
+    margin: 5px;
+}
+.fieldset-quero{
+    background: url("../imagens/icone-pagamento.png") no-repeat;
+    background-position: right;
+}
+.fieldset-quero legend{
+    color: gray;
+    padding: 5px;
+    font-weight: 600;
+}
+
+fieldset{
+    width: 40%;
+    display: flex;
+    justify-content: left;
+    flex-flow: column;
+    padding: 10px;
+}
+
+.text{
+    width: 200px;
+}
+
+.textbox{
+    height: 100px;
+    
+}
+
+.oculos-desloca{
+    content: url('../imagens/contato.png');
+}
+
+article{
+    display: block;
+}
+.btn-enviar{
+    background: linear-gradient(rgb(255, 255, 255), rgb(54, 54, 54), rgb(87, 87, 87));
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    /* position: relative; */
+    justify-self: flex-start;
+}
+
+textarea{
+    padding: 10px;
+    resize: none;
+    
+}

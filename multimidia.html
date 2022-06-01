@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/multimidia.css">
     <title>Document</title>
 </head>
 <body onload="SetHeaderAndFooter()">
@@ -22,11 +23,11 @@
                <h3>Aúdio e Video</h2>
                <div class="container-img-radio-tv">
                    <audio class="audio-play" controls>
-                       <source src="@media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+                       <source src="media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
                        Desculpe nao pode carregar o audio.
                    </audio>
                    <video class="video-play" controls="controls" poster="imagens/video-mini03.jpg">
-                       <source src="@media/getting-started.mp4" type="video/mp4"/>
+                       <source src="media/getting-started.mp4" type="video/mp4"/>
                        Desculpe nao pode carregar o video.
                    </video>
                 </div>
@@ -34,81 +35,6 @@
         </article>
         <footer></footer>
     </div>
-    <style>
-        .radio-tv{
-            background: url("imagens/radio-tv.png") no-repeat;
-            width: 100%;
-            height: 600px;
-            background-color: red;
-        }
-        .container-noticia{
-            position: relative;
-            display: flex;
-            gap: 20px;
-            margin: 30px;
-        }
 
-        article{
-            display: flex;
-            flex-flow: column;
-        }
-        .container-img{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-        .column-article h3{
-            color: rgb(51, 50, 50);
-            font-size: 14px;
-            padding: 10px;
-        }
-        .radio-tv{
-            position: relative;
-            width: 90%;
-            justify-self: center;
-        }
-        .container-noticia h2{
-            background-color: gray;
-            color: white;
-        }
-
-        .oculos-desloca{
-            content: url('imagens/multimidia.png');
-        }
-
-        .container-img-radio-tv{
-            background: url("imagens/radio-tv.png") no-repeat;
-            background-size: contain;
-            /* width: 100%; */
-            background-position: center;
-            height: 500px;
-            /* padding-top: 60%; */
-            background-color: rebeccapurple;
-        }
-
-        .container-img-radio-tv audio{
-            color: red;
-        }
-
-        .video-play{
-            position: relative;
-            display: block;
-            left: 16%;
-            top: 15%;
-            width: 40%;
-            height: 40%;
-        }
-
-        .audio-play{
-            position: relative;
-            display: block;
-            left: 64%;
-            top: 87%;
-            width: 26%;
-            height: 6%;
-        }
-
-        
-    </style>
 </body>
 </html>

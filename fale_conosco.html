@@ -35,30 +35,30 @@
                         </label>
                         <fieldset class="fieldset-sexo">
                             <legend>Sexo</legend>
-                            <label for="">
-                                <input type="radio" name="sexo">
+                            <label for="msexo">
+                                <input type="radio" name="sexo" id="msexo">
                                 Masculino
                             </label>
-                            <label for="sexo">
-                                <input type="radio" name="sexo">
+                            <label for="fsexo">
+                                <input type="radio" name="sexo" id="fsexo">
                                 Feminino
                             </label>
                         </fieldset>
-                        <label for="data-nascimento">Data de Nascimento
-                            <input type="date" >
+                        <label for="dnasce">Data de Nascimento
+                            <input type="date" name="dnasce" id="dnasce">
                         </label>
                     </fieldset>
                     <fieldset class="fieldset-endereco">
                         <legend>Endereço</legend>
                         <label for="logradouro">Logradouro:
-                            <input type="text" placeholder="Rua, Av., Trav">
+                            <input id="logradouro" type="text" placeholder="Rua, Av., Trav">
                         </label>
                         <label for="number">número
                             <input type="number" id="number">
                         </label>
-                        <label for="estado">Estado:
+                        <label for="estados">Estado:
                             <!-- <input list="estado" placeholder="Estados"> -->
-                            <select id="cidades" name="cidades">
+                            <select id="estados" name="estados">
                                 <option value="MA">Maranhão</option>
                                 <option value="RJ">Rio de Janeiro</option>
                                 <option value="MG">Minas Gerais</option>
@@ -97,10 +97,10 @@
                             <input type="color" id="cor" name="cor">
                         </label>
                         <label for="quantidade">Quantidade:
-                            <input type="number" value="0">
+                            <input onchange="CalcPrice()" name="quantidade" id="quantidade" type="number" value="1">
                         </label>
                         <label for="p-total">Preço Total: R$
-                            <input type="number" name="p-total" id="p-total" value="0.0"placeholder="Total a Pagar">
+                            <input readonly name="p-total" id="p-total" type="number" name="p-total" id="p-total" value="1200.00" placeholder="Total a Pagar">
                         </label>
                     </fieldset>
                     <button class="btn-enviar">Enviar</button>

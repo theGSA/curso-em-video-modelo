@@ -1,0 +1,25 @@
+.container-noticia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px;
+    width: 100%;
+}
+
+.container-noticia h2{
+    background-color: gray;
+    color: white;
+}
+
+.oculos-desloca{
+    content: url('../imagens/especificacoes.png');
+}
+
+article{
+    display: flex;
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+    align-items: center;
+    /* gap: 2px; */
+}

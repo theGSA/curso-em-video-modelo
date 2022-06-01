@@ -7,6 +7,11 @@ form{
 }
 fieldset{
     border: gray 1px solid;
+    
+}
+
+fieldset *{
+    background: rgba(255, 255, 255, 0.61);
 }
 
 .fieldset-identificacao{
@@ -37,7 +42,7 @@ input, select{
     background: url("../imagens/icone-pagamento.png") no-repeat;
     background-position: right;
 }
-.fieldset-quero legend{
+legend{
     color: gray;
     padding: 5px;
     font-weight: 600;
@@ -82,5 +87,5 @@ article{
 textarea{
     padding: 10px;
     resize: none;
-    
+   
 }

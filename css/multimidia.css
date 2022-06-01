@@ -14,6 +14,7 @@
 article{
     display: flex;
     flex-flow: column;
+    padding: 20px;
 }
 .container-img{
     width: 100%;
